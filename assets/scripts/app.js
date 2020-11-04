@@ -6,12 +6,11 @@ function createAndWriteOutput(operator, resultBeforeCalc, calcNumber) {
   outputResult(currentResult, calcDescription); // pass values to screen
 }
 
-//parseFloat change string to integer ore number with comate
 function add() {
   const input = parseFloat(userInput.value); // get input
   const initialResult = currentResult; // get start value so its not changed after math function
   currentResult = currentResult + input; // find the result
-  createAndWriteOutput("+", initialResult, input);
+  createAndWriteOutput("+", initialResult, input); // pass values to creat function
 }
 
 function subtract() {
