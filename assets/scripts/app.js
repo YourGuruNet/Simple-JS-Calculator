@@ -53,24 +53,8 @@ function calculateResult(calculationType) {
   writeToLog(calculationType, initialResult, input, currentResult);
 }
 
-function add() {
-  calculateResult("ADD");
-}
-
-function subtract() {
-  calculateResult("Subtract");
-}
-
-function multiply() {
-  calculateResult("Multiply");
-}
-
-function divide() {
-  calculateResult("Divide");
-}
-
-//When btn is clicked JS take function add
-addBtn.addEventListener("click", add);
-subtractBtn.addEventListener("click", subtract);
-multiplyBtn.addEventListener("click", multiply);
-divideBtn.addEventListener("click", divide);
+//When btn is clicked JS take function and bind the value
+addBtn.addEventListener("click", calculateResult.bind(this, "ADD"));
+subtractBtn.addEventListener("click", calculateResult.bind(this, "Subtract"));
+multiplyBtn.addEventListener("click", calculateResult.bind(this, "Multiply"));
+divideBtn.addEventListener("click", calculateResult.bind(this, "Divide"));
